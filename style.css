@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #b08d57;
+    --background-color: #f8f8f8;
+    --text-color-light: #fff;
+    --text-color-dark: #333;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--text-color-light);
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links, .nav-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.nav-icons a {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x800.png?text=New+Collection') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #9c7a48;
+}
+
+/* --- Products Section --- */
+.products-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--text-color-light);
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    margin: 0 0 5px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 5px 0 15px;
+}
+
+.add-to-cart {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-info, .footer-links, .social-media {
+    margin-bottom: 20px;
+}
+
+.footer-info h4 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-media a {
+    color: var(--text-color-light);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    font-size: 0.9em;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
